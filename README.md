@@ -1,7 +1,29 @@
 # MioPlay 
 
--- 一般二刺螈主题的音乐播放网站 -- (二刺螈真的是==!)
+## Api使用 [NeteaseCloudMusicApi][NeteaseCloudMusicApi]
 
-- Api使用 [NeteaseCloudMusicApi][NeteaseCloudMusicApi]
+
+# 项目结构
+
+## src
+  - assets 图标等美术素材
+  - common 常亮
+  - components 通用组件
+  - mobile 移动端页面
+  - pages pc端页面
+  - router 路由
+  - service  接口封装
+  - store 全局变量
+  - type 类型接口
+  - utils 工具函数
+
+## 命名规则
+- 文件名：小写 '-'
+- 组件名: 大驼峰
+- 函数名：小驼峰
+- interface & type: Ixx
+- props接口: 写在当前文件夹下
+- css接口同理
+- 多文件统一由当前的index文件导出
 
 [NeteaseCloudMusicApi]:https://github.com/Binaryify/NeteaseCloudMusicApi
