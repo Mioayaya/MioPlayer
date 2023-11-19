@@ -26,4 +26,7 @@
 - css接口同理
 - 多文件统一由当前的index文件导出
 
+## 文件结构
+- App.tsx -> router 
+
 [NeteaseCloudMusicApi]:https://github.com/Binaryify/NeteaseCloudMusicApi
