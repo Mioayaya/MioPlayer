@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { assessFunc, routerFunc } from './utils';
-import { CONFIG, ROUTE } from './common';
+import { assessFunc } from './utils';
+import { CONFIG } from './common';
 import './App.css';
 import MioContent from './pages/content';
 import MioMobContent from './mobile/content';
