@@ -27,11 +27,12 @@ export const mobileRouter:Irouter.IrouterElement[] = [
     key: 'mob_0',
     path: '/home',
     element: <MioMobHome />,
-    children: [{
-      key: 'mob_0_0',
-      path: '/home/test',
-      element: <MioMobHomeTest />
-    }]
+    children: null
+    // children: [{
+    //   key: 'mob_0_0',
+    //   path: '/home/test',
+    //   element: <MioMobHomeTest />
+    // }]
   },
   {
     key: 'mob_1',
