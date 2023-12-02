@@ -34,4 +34,8 @@
 # 问题描述
 
 
+# tips
+pc端灵感来自：**Bocchi the Rock! ぼっち・ざ・ろっく！(Album)** `[WallPaper]` author: Cube
+
+
 [NeteaseCloudMusicApi]:https://github.com/Binaryify/NeteaseCloudMusicApi

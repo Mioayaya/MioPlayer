@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 import { assessFunc } from './utils';
 import { CONFIG } from './common';
 import './App.css';
@@ -7,21 +7,22 @@ import MioMobContent from './mobile/content';
 
 function App() {
   const [pageType,setPageType] = useState<string>('');
-
+  
   useEffect(() => {
     setPageType(assessFunc.assessPage());
   },[])
+
+  const renderContent = ():ReactElement => {
+    if(pageType === CONFIG.ASSESS.WEB) {
+      return <MioContent />;
+    } else {
+      return <MioMobContent />;
+    }
+  }
+
   return (
     <div className='app'>
-      {
-        !pageType ? <>loading····</>
-        : <>
-          {
-            pageType === CONFIG.ASSESS.WEB 
-            ? <MioContent />
-            : <MioMobContent />
-          }</>  
-      }
+      {!pageType ? <div className="loading">Loading...</div> : renderContent()}
     </div>
   )
 }
