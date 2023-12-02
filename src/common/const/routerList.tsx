@@ -3,7 +3,6 @@ import { Irouter } from "../../type";
 import MioTest from "../../components/router-test";
 import MioMobHome from "../../mobile/home";
 import MioHome from "../../pages/home";
-import MioMobHomeTest from "../../mobile/home/c-pages/home-test";
 
 // pc路由
 export const webRouter:Irouter.IrouterElement[] = [

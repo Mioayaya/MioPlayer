@@ -1,25 +1,44 @@
 import styled from "@emotion/styled";
+import { PICTURE } from "../../common";
 
-export const MioContentDiv = styled.div`  
+console.log(PICTURE.BACKGROUND.default);
+
+
+export const MioContentDiv = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(${PICTURE.BACKGROUND.default});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
 
-  .top {
-    height: 150px;
-  } 
+  &>*:not(.background-cover) {
+    opacity: 0.7;
+    /* background-color: #000; */
+    color: #fff;
+    z-index: 2;
+  }
+
+  .background-cover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    opacity: 0.9;
+    z-index: 1;
+  }
   
   .middle {
-    overflow-y: scroll;
-    background-color: black;
-    color: #fff;
+    flex: 1;
+    overflow-y: scroll;        
     ::-webkit-scrollbar-thumb {      
       background-color: #aee;
     }
   }
 
   .play-bar {
-    height: 150px;
+    height: 75px;
   }  
 `

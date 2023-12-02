@@ -2,13 +2,14 @@ import { FC } from 'react';
 import { useRoutes } from 'react-router';
 import route from '../../router';
 import { MioContentDiv } from './style';
+import MioTopBar from './c-cmps/top-bar';
 
 const MioContent:FC = () => {
-  
 
   return (
-    <MioContentDiv> 
-      <div className="top">something else</div>
+    <MioContentDiv>
+      <div className="background-cover"></div>
+      <MioTopBar />      
       <div className="middle">
         { useRoutes(route) }
       </div>

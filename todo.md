@@ -1,5 +1,8 @@
-# todolist
-- 路由
-- 接口
-- 类型
-
+# todolist  ⬜ ✅
+- TopBar    ⬜
+- Content   ⬜
+- PlayerBar ⬜
+ 
+## topBar
+- ui ⬜
+- 
