@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router';
 import route from '../../router';
 import { MioContentDiv } from './style';
 import MioTopBar from './c-cmps/top-bar';
+import MioLeftMenuBar from './c-cmps/left-menu-bar';
 
 const MioContent:FC = () => {
 
@@ -11,11 +12,7 @@ const MioContent:FC = () => {
       <div className="background-cover"></div>
       <MioTopBar />      
       <div className="middle">
-        <div className="content-left">
-          <p>1</p>
-          <p>12</p>
-          <p>123</p>
-        </div>
+        <MioLeftMenuBar />
         { useRoutes(route) }
       </div>
       <div className="play-bar">播放栏</div>

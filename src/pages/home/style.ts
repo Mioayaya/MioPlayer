@@ -9,6 +9,6 @@ export const MioHomeDiv = styled.div`
   flex-direction: column;
   align-items: center;
   ::-webkit-scrollbar-thumb {      
-    background-color: #aee;
+    background-color: rgba(0,0,0,0.55);
   }
 `

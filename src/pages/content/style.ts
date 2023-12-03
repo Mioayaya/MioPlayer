@@ -32,14 +32,8 @@ export const MioContentDiv = styled.div`
     overflow-y: hidden;
     &>*:not(.content-left) {
       padding: ${LAYOUT.Configtation.contentPaddingV} 0;
+      
     }
-  }
-
-  .content-left {
-    position: fixed;
-    top: 50%;
-    left: 7%;
-    transform: translate(0,-50%);
   }
 
   .play-bar {

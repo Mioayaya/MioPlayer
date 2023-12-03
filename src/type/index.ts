@@ -1,5 +1,7 @@
-import * as Irouter from './interface/router'
+import * as Irouter from './interface/router';
+import * as ImenuBar from './interface/menuBar';
 
 export {
-  Irouter
+  Irouter,
+  ImenuBar,
 }
