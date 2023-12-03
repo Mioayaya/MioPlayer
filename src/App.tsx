@@ -13,7 +13,7 @@ function App() {
   },[])
 
   const renderContent = ():ReactElement => {
-    if(pageType === CONFIG.ASSESS.WEB) {
+    if(pageType === CONFIG.Assess.WEB) {
       return <MioContent />;
     } else {
       return <MioMobContent />;

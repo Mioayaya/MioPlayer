@@ -1,1 +1,1 @@
-export const WEBSITEICON = ''
+export const WebSiteIcon = ''

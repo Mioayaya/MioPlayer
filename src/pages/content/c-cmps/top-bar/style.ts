@@ -1,12 +1,15 @@
 import styled from "@emotion/styled";
+import { LAYOUT } from "../../../../common";
 
 export const MioTopBarDiv = styled.div`
-  height: 75px;
+  height: ${LAYOUT.Configtation.topBarHeight};
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+  /* box-shadow: 0 2px 4px rgba(255,255,255,0.1); */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
   
   .top-bar-left {
     display: flex;

@@ -6,6 +6,6 @@ import routeWeb from "./settings/web";
 
 const assessFlag = assessFunc.assessPage();
 let route:Irouter.IrouterList[];
-assessFlag===CONFIG.ASSESS.MOBILE?route=routeMob:route=routeWeb;
+assessFlag===CONFIG.Assess.MOBILE?route=routeMob:route=routeWeb;
 
 export default route;

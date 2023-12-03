@@ -26,15 +26,15 @@ export const toRoute = (routerList:Irouter.IrouterElement[]):Irouter.IrouterList
   const _route:Irouter.IrouterList[] = [];
   _route.push(firstItem);
 
-  for(let i in routerList) {
-    let item:Irouter.IrouterList = {
+  for(const i in routerList) {
+    const item:Irouter.IrouterList = {
       path: routerList[i].path,
       element: routerList[i].element
     }
     const child = routerList[i].children;
     if(child) {
       item.children = [];
-      for(let j in child) {
+      for(const j in child) {
         if(j==='0') {
           item.children.push({
             index: true,

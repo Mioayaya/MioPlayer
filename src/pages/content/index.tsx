@@ -11,6 +11,11 @@ const MioContent:FC = () => {
       <div className="background-cover"></div>
       <MioTopBar />      
       <div className="middle">
+        <div className="content-left">
+          <p>1</p>
+          <p>12</p>
+          <p>123</p>
+        </div>
         { useRoutes(route) }
       </div>
       <div className="play-bar">播放栏</div>

@@ -6,9 +6,9 @@ export const assessPage = ():string => {
 
   if(reg.test(ua)) {
     // 手机端
-    return CONFIG.ASSESS.MOBILE;
+    return CONFIG.Assess.MOBILE;
   }else {
     // pc端
-    return CONFIG.ASSESS.WEB;
+    return CONFIG.Assess.WEB;
   }
 }

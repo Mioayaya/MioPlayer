@@ -8,7 +8,7 @@ const MioTopBar:FC = () => {
 
       <div className="top-bar-left">
         <div className="web-img">
-          <img src="/public/kagami.png" alt="MioPlayer" />
+          <img src="/kagami.png" alt="MioPlayer" />
         </div>
         <div className="web-name">MioMusic</div>
         <div className="opreate-btns">
