@@ -18,7 +18,7 @@ const MioTopBar:FC = memo(() => {
         <div className="search">搜索栏</div>
       </div>
 
-      <div className="top-bar-middle">歌词</div>
+      <div className="top-bar-middle">······</div>
 
       <div className="top-bar-right">
         header and other things

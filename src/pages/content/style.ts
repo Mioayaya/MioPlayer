@@ -9,11 +9,9 @@ export const MioContentDiv = styled.div`
   background-image: url(${PICTURE.Background.default});
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
   &>*:not(.background-cover) {
-    opacity: 0.7;
-    /* background-color: #000; */
-    color: #000;
+    color: #fff;
     z-index: 2;
   }
 
@@ -22,7 +20,7 @@ export const MioContentDiv = styled.div`
     height: 100vh;
     position: absolute;
     backdrop-filter: blur(10px);
-    opacity: 0.9;
+    opacity: 0.9;  
     z-index: 1;
   }
   
