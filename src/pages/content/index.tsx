@@ -10,7 +10,7 @@ const MioContent:FC = () => {
   return (
     <MioContentDiv>
       <div className="background-cover"></div>
-      <MioTopBar />      
+      <MioTopBar />
       <div className="middle">
         <MioLeftMenuBar />
         { useRoutes(route) }

@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC,memo } from 'react';
 import { MioTopBarDiv } from './style';
 
-const MioTopBar:FC = () => {
+const MioTopBar:FC = memo(() => {
 
   return (
     <MioTopBarDiv>
@@ -26,6 +26,6 @@ const MioTopBar:FC = () => {
       
     </MioTopBarDiv>
   )
-}
+})
 
 export default MioTopBar;

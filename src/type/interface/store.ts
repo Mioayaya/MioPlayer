@@ -1,3 +1,7 @@
+export interface Islice {
+  userSlice: IuserSlice
+}
+
 /** user */ 
 
 export interface IuserData {

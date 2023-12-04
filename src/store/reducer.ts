@@ -1,7 +1,9 @@
 import testSlice from "./slices/test";
+import userSlice from "./slices/user";
 
 const reducer = {
-  testSlice
+  testSlice,
+  userSlice
 }
 
 export default reducer;
