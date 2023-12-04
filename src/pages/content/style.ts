@@ -10,11 +10,10 @@ export const MioContentDiv = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;  
-
   &>*:not(.background-cover) {
     opacity: 0.7;
     /* background-color: #000; */
-    color: #fff;
+    color: #000;
     z-index: 2;
   }
 
@@ -29,10 +28,12 @@ export const MioContentDiv = styled.div`
   
   .middle {
     flex: 1;    
-    overflow-y: hidden;
-    &>*:not(.content-left) {
-      padding: ${LAYOUT.Configtation.contentPaddingV} 0;
-      
+    overflow-y: scroll;
+    padding: ${LAYOUT.Configtation.contentPaddingV} 0;
+    padding-left: ${LAYOUT.Configtation.contentPaddingL};
+    padding-right: ${LAYOUT.Configtation.contentPaddingR};
+      ::-webkit-scrollbar-thumb {      
+      background-color: rgba(0,0,0,0.55);
     }
   }
 

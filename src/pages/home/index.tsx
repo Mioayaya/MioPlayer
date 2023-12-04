@@ -1,11 +1,11 @@
-import { FC, } from 'react';
+import { FC, useEffect } from 'react';
 import { MioHomeDiv } from './style';
 import MioScrollReveal from '../../components/scroll-reveal';
 
 const MioHome:FC = () => {  
   const fileArr:Array<number> = [];
   fileArr.length = 100;
-  fileArr.fill(123);  
+  fileArr.fill(123);
 
   return (
     <MioHomeDiv>

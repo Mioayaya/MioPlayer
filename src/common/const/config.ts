@@ -5,3 +5,4 @@ export const Assess = {
   MOBILE: 'mobile'
 }
 
+export const BaseURL = 'http://182.92.7.115:3000/'
