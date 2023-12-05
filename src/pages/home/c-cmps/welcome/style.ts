@@ -15,8 +15,8 @@ export const MioHomeWelcomeDiv = styled.div`
     }
   }
 
-  .hello {
-    margin: 0 10px;    
+  &>*:not(:last-child) {
+    margin-right: 10px;
   }
 
   h1 {
@@ -36,6 +36,5 @@ export const MioHomeWelcomeDiv = styled.div`
   .sentence {
     font-size: 1rem;
     font-style: italic;
-    margin-left: 20px;
   }
 `

@@ -1,8 +1,12 @@
+import { lazy } from "react";
 import { Irouter } from "../../type";
 
-import MioTest from "../../components/router-test";
-import MioMobHome from "../../mobile/home";
-import MioHome from "../../pages/home";
+
+const MioHome = lazy(() => import("../../pages/home"));
+const MioSearch = lazy(() => import("../../pages/search"));
+
+const MioTest = lazy(() => import("../../components/router-test"));
+const MioMobHome = lazy(() => import("../../mobile/home"));
 
 // pc路由
 export const webRouter:Irouter.IrouterElement[] = [
@@ -14,10 +18,10 @@ export const webRouter:Irouter.IrouterElement[] = [
   },
   {
     key: 'web_1',
-    path: '/test',
-    element: <MioTest />,
+    path: '/search',
+    element: <MioSearch/>,
     children: null
-  }
+  },
 ];
 
 // 手机端路由

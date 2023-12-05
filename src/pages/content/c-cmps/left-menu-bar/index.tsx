@@ -2,6 +2,7 @@ import { FC, memo } from 'react'
 import { MioLeftMenuBarDiv } from './style'
 import { MENUBAR } from '../../../../common'
 import MioIcon from '../../../../components/icon'
+import { Link } from 'react-router-dom'
 
 interface Iprops {
 
@@ -13,9 +14,11 @@ const MioLeftMenuBar:FC<Iprops> = memo(() => {
       {
         MENUBAR.LeftMenuBar.map((item) => {
           return (
-            <div className="menu" key={item.key} title={item.name}>
-              <MioIcon iconName={item.icon} />
-            </div>
+            <Link to={item.link} key={item.key}>
+              <div className="menu" title={item.name}>
+                <MioIcon iconName={item.icon} />
+              </div>
+            </Link>
           )
         })
       }

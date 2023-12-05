@@ -1,8 +1,8 @@
-import { ReactElement, Suspense } from "react";
+import { ReactElement, Suspense, lazy } from "react";
 import { Navigate } from "react-router";
-
-import MioNotFound from "../../components/404";
 import { Irouter } from "../../type";
+
+const MioNotFound = lazy(() => import('../../components/404'))
 
 export const lazyLoad = (children: ReactElement) => {
   return <Suspense fallback={<>loading···</>}>{children}</Suspense>
@@ -29,7 +29,7 @@ export const toRoute = (routerList:Irouter.IrouterElement[]):Irouter.IrouterList
   for(const i in routerList) {
     const item:Irouter.IrouterList = {
       path: routerList[i].path,
-      element: routerList[i].element
+      element: lazyLoad(routerList[i].element)
     }
     const child = routerList[i].children;
     if(child) {
@@ -47,7 +47,7 @@ export const toRoute = (routerList:Irouter.IrouterElement[]):Irouter.IrouterList
         }
         item.children.push({
           path: child[j].path,
-          element: child[j].element
+          element: lazyLoad(child[j].element)
         })    
       }
     }

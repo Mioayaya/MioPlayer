@@ -2,7 +2,6 @@ import { FC, useEffect, memo, useState } from 'react';
 import { load } from 'jinrishici';
 
 import { MioHomeWelcomeDiv } from './style';
-import { jinrishiciApi } from '../../../../service';
 import { Ijinrishici } from '../../../../type';
 import { Message } from '@arco-design/web-react';
 
@@ -17,43 +16,35 @@ for(let i=0;i<24;i++) {
 }
 interface Iprops {
   isSign: boolean
+  weatherData: Ijinrishici.IweatherData
 }
 
 const MioHomeWelcom:FC<Iprops> = memo((props) => {  
-  const { isSign } = props;
-  const [ hello,setHello ] = useState<string>('······');
-  const [ weatherData,setWeatherData ] = useState<Ijinrishici.IweatherData|null>(null);
+  const { isSign,weatherData } = props;
+  const [ hello,setHello ] = useState<string|null>(null);
   const [ sentence,setSentence ] = useState<string|null>(null);
 
   useEffect(() => {    
     const date = new Date();    
     setHello(timeMap.get(date.getHours()) as string);
     try {
-      getWeather();
       getPoem();
     } catch {
       Message.error('some was wrong~');
     }
   },[])
 
-  const getWeather = async () => {
-    const res = await jinrishiciApi.getWeather();  
-    setWeatherData(res.data.weatherData);
-  }
-
   const getPoem = async () => {
     await load((res: {data:{content:string,[s:string]:string|number}}) => {      
       setSentence(res.data.content)
-    });    
+    });
   }
-
-  
 
   return (
     <MioHomeWelcomeDiv>
-      { !isSign && <div className='img'><img src="" alt="头像" /></div> }
+      { isSign && <div className='img'><img src="" alt="头像" /></div> }
       <h1 className='hello'>{hello}</h1>
-      { !isSign && <h1 className='nick-name'>, nicName</h1>}
+      { isSign && <h1 className='nick-name'>, nicName</h1>}
 
       { weatherData && 
         <div className="weather">
