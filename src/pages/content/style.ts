@@ -6,19 +6,29 @@ export const MioContentDiv = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(${PICTURE.Background.default});
+  /* background-image: url(${PICTURE.Background.default});
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  &>*:not(.background-cover) {
+  background-repeat: no-repeat; */
+
+  &>*:not(.background-cover,.background) {
     color: #fff;
     z-index: 2;
   }
 
-  .background-cover {
+  .background,.background-cover {
     width: 100vw;
     height: 100vh;
     position: absolute;
+  }
+
+  .background {
+    z-index: 0;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .background-cover {
     backdrop-filter: blur(10px);
     opacity: 0.9;  
     z-index: 1;

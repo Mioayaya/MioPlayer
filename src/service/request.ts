@@ -19,7 +19,7 @@ export default function request(option:Ioption) {
 		});
 
 		instance.interceptors.request.use(config => {
-      config.headers.cookie = document.cookie;
+      // config.headers.cookie = document.cookie;
 			return config
 		}, err => {
 			return err

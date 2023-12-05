@@ -16,15 +16,14 @@ export const MioHomeWelcomeDiv = styled.div`
   }
 
   &>*:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   h1 {
     font-size: 2.5rem;
   }
 
-  .weather {
-    margin-left: 20px;
+  .weather {    
     font-size: 1.1rem;
     .weather-top,.weather-bottom {
       &>*:not(:last-child) {

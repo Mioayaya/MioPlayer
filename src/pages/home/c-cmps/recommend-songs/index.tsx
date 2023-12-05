@@ -1,5 +1,8 @@
 import { FC, useEffect, memo, useState } from 'react';
 import { Imusic } from '../../../../type';
+import { MioHomeRecommendSongsDiv } from './style';
+import { imgFunc } from '../../../../utils';
+import { IMGSIZE } from '../../../../common';
 
 interface Iprops {
   songData: Imusic.Isong[]
@@ -8,15 +11,12 @@ interface Iprops {
 const MioHomeRecommendSongs:FC<Iprops> = memo((props) => {  
   const { songData } = props;
 
-  useEffect(() => {
-    console.log(songData);
-    
-  },[])
-
   return (
-    <div>
-      <h1>recommendSongs</h1>
-    </div>
+    <MioHomeRecommendSongsDiv>
+      <div className="img">
+        <img src={imgFunc.getImgBySize(songData[3].picUrl,IMGSIZE.SongImgCard.max)} alt="" />
+      </div>
+    </MioHomeRecommendSongsDiv>
   )
 })
 

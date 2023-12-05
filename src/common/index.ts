@@ -3,6 +3,7 @@ import * as ROUTE from './const/routerList';
 import * as PICTURE from './assets/pictures';
 import * as LAYOUT from './styles/layout';
 import * as MENUBAR from './const/menuBar';
+import * as IMGSIZE from './styles/imgSize';
 
 export {
   CONFIG,
@@ -10,4 +11,5 @@ export {
   PICTURE,
   LAYOUT,
   MENUBAR,
+  IMGSIZE,
 }

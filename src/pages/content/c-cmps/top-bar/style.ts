@@ -39,9 +39,9 @@ export const MioTopBarDiv = styled.div`
   .web-img {
     width: 45px;
     height: 45px;    
-    img {
-      background-size: cover;
-      border-radius: 20%;      
+    img {      
+      object-fit: cover;
+      border-radius: 20%;
     }
   }
 `

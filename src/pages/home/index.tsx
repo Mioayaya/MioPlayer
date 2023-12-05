@@ -15,6 +15,7 @@ const MioHome:FC = () => {
 
   useEffect(() => {
     getAll();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const getWelcome = async () => {
@@ -23,7 +24,7 @@ const MioHome:FC = () => {
   }
 
   const getSongs = async () => {
-    const res = await foundMusicApi.getPersonalizedNewSong() as any;
+    const res = await foundMusicApi.getPersonalizedNewSong() as {result:Imusic.Isong[]};
     setSongData(res.result);
   }
 
@@ -40,8 +41,8 @@ const MioHome:FC = () => {
 
   return (
     <MioHomeDiv>
+      { !weatherData && <>loading····</> }
       <MioScrollReveal>
-        { !weatherData && <>loading····</> }
         { weatherData && <MioHomeWelcom isSign={isSign} weatherData={weatherData}/> }
         { weatherData && songData && <MioHomeRecommendSongs songData={songData}/> }
       </MioScrollReveal>
