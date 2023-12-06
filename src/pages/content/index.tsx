@@ -15,19 +15,16 @@ const MioContent:FC = () => {
   };
 
   return (
-    <MioContentDiv>
+    <MioContentDiv style={{opacity:backgroundLoaded?1:0}}>
+      {/* 图片加载完再展现，防止白屏 */}
       <img className='background' src={PICTURE.Background.default} alt="" onLoad={handleBackgroundLoad}/>
-      { backgroundLoaded && (
-        <> 
-          <div className="background-cover"></div>
-          <MioTopBar />
-          <div className="middle">
-            <MioLeftMenuBar />
-            { routes }
-          </div>
-          <div className="play-bar">播放栏</div>
-        </>
-      )}
+      <div className="background-cover"></div>
+      <MioTopBar />
+      <div className="middle">
+        <MioLeftMenuBar />
+        { routes }
+      </div>
+      <div className="play-bar">播放栏</div>
       
     </MioContentDiv>
   )

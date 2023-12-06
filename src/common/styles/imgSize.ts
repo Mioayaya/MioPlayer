@@ -1,7 +1,7 @@
 export const SongImgSize = 100;
 
 export const SongImgCard = {
-  width: 400,
+  width: 200,
   height: 200,
-  max: 400
+  max: 200
 }
